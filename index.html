@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Abdel Rahim Tohamy - Personal Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+            border: 5px solid #fff;
+        }
+
+        header .language-switch {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        header .language-switch button {
+            background-color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .experience-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .experience-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .experience-item div {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Taha Abdel Rahim Tohamy</h1>
+        <img src="baba.jfif" alt="Profile Picture" class="profile-pic">
+        <div class="language-switch">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('ar')">العربية</button>
+        </div>
+    </header>
+
+    <div class="content">
+        <section id="objective">
+            <h2>Objective</h2>
+            <p data-en="Seeking a challenging position in a reputable chain where my skills and experience can be further enhanced to fulfill my ambition."
+               data-ar="البحث عن وظيفة تحدي في سلسلة محترمة حيث يمكن تعزيز مهاراتي وخبرتي لتحقيق طموحي."></p>
+        </section>
+
+        <section id="skills">
+            <h2>Summary of Skills</h2>
+            <ul>
+                <li data-en="Excellent Communication Skills" data-ar="مهارات اتصال ممتازة"></li>
+                <li data-en="Strong Leadership" data-ar="قيادة قوية"></li>
+                <li data-en="Planning" data-ar="التخطيط"></li>
+                <li data-en="Problem Solving" data-ar="حل المشاكل"></li>
+                <li data-en="Training & Human Resources Management" data-ar="التدريب وإدارة الموارد البشرية"></li>
+                <li data-en="Excellent Computer Skills" data-ar="مهارات حاسوبية ممتازة"></li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p data-en="Manial El Roda commercial Institute in Cairo (1985 – 1987)" 
+               data-ar="معهد منيل الروضة التجاري في القاهرة (1985 - 1987)"></p>
+            <p data-en="Hotel & Restaurants Management from College of English Education and Management Training (1993)" 
+               data-ar="إدارة الفنادق والمطاعم من كلية التعليم الإنجليزي والتدريب الإداري (1993)"></p>
+            <!-- Add more education details similarly -->
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <img src="texas.png" alt="Texas Roadhouse Logo">
+                <div>
+                    <h3 data-en="General Restaurant Manager at Alshaya International Co. (20/10/2019 - 6/3/2024)" 
+                        data-ar="مدير مطعم عام في شركة الشايع الدولية (20/10/2019 - 6/3/2024)"></h3>
+                    <ul>
+                        <li data-en="Handling more than 60 Employees & Managers" 
+                            data-ar="إدارة أكثر من 60 موظفًا ومديرًا"></li>
+                        <!-- Add more job responsibilities similarly -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <img src="logo.png" alt="Restaurant & Catering Co. Logo">
+                <div>
+                    <h3 data-en="Operation Manager at Restaurant & Catering Co. (26/03/2018 - 1/9/2019)" 
+                        data-ar="مدير العمليات في شركة مطاعم وتموين (26/03/2018 - 1/9/2019)"></h3>
+                    <ul>
+                        <li data-en="Supervise all restaurant activities and ensure compliance to all company standards." 
+                            data-ar="الإشراف على جميع أنشطة المطعم وضمان الامتثال لجميع معايير الشركة."></li>
+                        <!-- Add more job responsibilities similarly -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Repeat the above block for each job experience with the appropriate logo and details -->
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p data-en="Reading, Football" 
+               data-ar="القراءة، كرة القدم"></p>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <p data-en="A list of references is available on request." 
+               data-ar="قائمة المراجع متاحة عند الطلب."></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Taha Abdel Rahim Tohamy</p>
+    </footer>
+
+    <script>
+        function switchLanguage(language) {
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                el.innerText = el.getAttribute('data-' + language);
+            });
+        }
+    </script>
+</body>
+</html>
