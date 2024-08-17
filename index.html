@@ -7,17 +7,35 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <style>
-        body {
+    <style>        body {
             font-family: 'Arial', sans-serif;
-            background-color: #e0e0e0;
+            background-color: #f2f5f7;
             color: #333;
             overflow-x: hidden;
         }
 
+.top-left-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-left-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
         header {
-            background-color: #003366;
-            color: #fff;
+            background-color: #1a2a3a;
+            color: #ffffff;
             padding: 60px 0;
             text-align: center;
             position: relative;
@@ -49,23 +67,25 @@
         }
 
         header .language-switch button {
-            background-color: #f4f4f4;
+            background-color: #3a4a5a;
             border: none;
             padding: 10px 20px;
             margin-left: 5px;
             cursor: pointer;
             font-weight: bold;
-            color: #003366;
+            color: #ffffff;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
         header .language-switch button:hover {
-            background-color: #ccc;
+            background-color: #506070;
+            transform: translateY(-3px);
+
         }
 
         .content {
-            padding: 30px;
+            padding: 20px;
             max-width: 1100px;
             margin: 0 auto;
             background-color: #fff;
@@ -100,20 +120,25 @@
         }
 
         .experience-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeInRight 1.5s ease-out;
         }
 
         .experience-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .experience-item img {
-            width: 110px;
+            width: 200px;
             height: 110px;
             margin-right: 25px;
             border-radius: 12px;
@@ -209,6 +234,7 @@
                 opacity: 1;
             }
         }
+
     </style>
 </head>
 <body>
@@ -220,6 +246,7 @@
             <button onclick="switchLanguage('ar')">العربية</button>
         </div>
     </header>
+<a href="certi.html" class="top-left-button">Certifications</a>
 
     <div class="content">
         <section id="objective">
@@ -256,7 +283,7 @@
         <img src="texas.png" alt="Texas Roadhouse Logo">
         <div>
             <h3 data-en="General Restaurant Manager at Alshaya International Co. (20/10/2019 - 6/3/2024)" 
-                data-ar="مدير مطعم عام في شركة الشايع الدولية (20/10/2019 - 6/3/2024)"></h3>
+                data-ar="مدير عام مطعم في شركة الشايع الدولية (20/10/2019 - 6/3/2024)"></h3>
             <ul>
                 <li data-en="Handling more than 60 Employees & Managers" 
                     data-ar="إدارة أكثر من 60 موظفًا ومديرًا"></li>
@@ -288,7 +315,7 @@
         <img src="logo.png" alt="Restaurant & Catering Co. Logo">
         <div>
             <h3 data-en="Operation Manager at Restaurant & Catering Co. (26/03/2018 - 1/9/2019)" 
-                data-ar="مدير العمليات في شركة مطاعم وتموين (26/03/2018 - 1/9/2019)"></h3>
+                data-ar="مدير تشغيل في شركة الامتداد و تموين (26/03/2018 - 1/9/2019)"></h3>
             <ul>
                 <li data-en="Supervise all restaurant activities and ensure compliance to all company standards to increase all sales of labor costs and prepare various reports accurately and within timeframe." 
                     data-ar="الإشراف على جميع أنشطة المطعم وضمان الامتثال لجميع معايير الشركة لزيادة جميع مبيعات تكاليف العمالة وإعداد التقارير المختلفة بدقة وضمن الإطار الزمني."></li>
@@ -312,7 +339,7 @@
         <img src="logo.png" alt="Gadwa Ashwa Co. Logo">
         <div>
             <h3 data-en="Operations Manager at Gadwa Ashwa Co. (1/1/2017 - 31/12/2017)" 
-                data-ar="مدير العمليات في شركة جدوى أشواء (1/1/2017 - 31/12/2017)"></h3>
+                data-ar="مدير تشغيل في شركة غدوه عشوا (1/1/2017 - 31/12/2017)"></h3>
             <ul>
                 <li data-en="Hires, schedules, supervises, trains and coordinates all the work." 
                     data-ar="يوظف، يحدد الجداول الزمنية، يشرف، يدرب وينسق جميع الأعمال."></li>
@@ -347,30 +374,31 @@
     </div>
 
     <div class="experience-item">
-        <img src="logo.png" alt="Safari Group Logo">
-        <div>
-            <h3 data-en="Asst. Purchasing Manager at Safari Group (1/5/2013 - 31/12/2016)" 
-                data-ar="مساعد مدير المشتريات في مجموعة سفاري (1/5/2013 - 31/12/2016)"></h3>
-            <ul>
-                <li data-en="Getting goods and services for the best price and value." 
-                    data-ar="الحصول على السلع والخدمات بأفضل سعر وقيمة."></li>
-                <li data-en="Cutting any waste and unnecessary costs to create a streamlined process and fast production times." 
-                    data-ar="قطع أي نفايات وتكاليف غير ضرورية لإنشاء عملية مبسطة وأوقات إنتاج سريعة."></li>
-                <li data-en="Working with suppliers to ensure that key processes are running efficiently and cost-effectively." 
-                    data-ar="العمل مع الموردين لضمان تشغيل العمليات الرئيسية بكفاءة وفعالية من حيث التكلفة."></li>
-                <li data-en="Building strong working relationships both internally and with key suppliers." 
-                    data-ar="بناء علاقات عمل قوية داخليًا ومع الموردين الرئيسيين."></li>
-                <li data-en="Contract management and negotiation." 
-                    data-ar="إدارة العقود والتفاوض."></li>
-                <li data-en="Understanding and keeping up with new trends and regulations in the business." 
-                    data-ar="فهم ومواكبة الاتجاهات واللوائح الجديدة في الأعمال التجارية."></li>
-                <li data-en="Dealing with international suppliers." 
-                    data-ar="التعامل مع الموردين الدوليين."></li>
-                <li data-en="Understanding technology and managing online systems such as e-auctions and e-tendering." 
-                    data-ar="فهم التكنولوجيا وإدارة الأنظمة عبر الإنترنت مثل المزادات الإلكترونية والمناقصات الإلكترونية."></li>
-            </ul>
-        </div>
+    <img src="logo.png" alt="Safari Group Logo">
+    <div>
+        <h3 data-en="Asst. Purchasing Manager at Safari Group (1/5/2013 - 31/12/2016)" 
+            data-ar="مساعد مدير المشتريات في مجموعة سفاري (1/5/2013 - 31/12/2016)"></h3>
+        <ul>
+            <li data-en="Getting goods and services for the best price and value." 
+                data-ar="الحصول على السلع والخدمات بأفضل سعر وقيمة."></li>
+            <li data-en="Cutting any waste and unnecessary costs to create a streamlined process and fast production times." 
+                data-ar="تقليل النفقات والمواد المهدرة بما يساعد في تجهيز العمليات بشكل أسرع."></li>
+            <li data-en="Working with suppliers to ensure that key processes are running efficiently and cost-effectively." 
+                data-ar="العمل مع الموردين لضمان تشغيل العمليات الرئيسية بكفاءة وفعالية من حيث التكلفة."></li>
+            <li data-en="Building strong working relationships both internally and with key suppliers." 
+                data-ar="بناء علاقات عمل قوية داخليًا ومع الموردين الرئيسيين."></li>
+            <li data-en="Contract management and negotiation." 
+                data-ar="إدارة العقود والتفاوض."></li>
+            <li data-en="Understanding and keeping up with new trends and regulations in the business." 
+                data-ar="فهم ومواكبة الاتجاهات واللوائح الجديدة في مجال الأعمال."></li>
+            <li data-en="Dealing with international suppliers." 
+                data-ar="التعامل مع الموردين الدوليين."></li>
+            <li data-en="Understanding technology and managing online systems such as e-auctions and e-tendering." 
+                data-ar="فهم التكنولوجيا وإدارة الأنظمة عبر الإنترنت مثل المزادات الإلكترونية والمناقصات الإلكترونية."></li>
+        </ul>
     </div>
+</div>
+
 
     <div class="experience-item">
         <img src="logo.png" alt="EL Chico K.S.A Logo">
