@@ -115,6 +115,58 @@ header .language-switch button:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+ .email-button {
+        position: fixed;
+        bottom: 100px; /* Adjusted to be above the WhatsApp icon */
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        background-color: #0072C6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .email-button img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .email-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+.linkedin-button {
+    position: fixed;
+    bottom: 20px; /* Positioned above the email button */
+    left: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #0077b5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.linkedin-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .content {
     padding: 20px;
     max-width: 1200px;
@@ -401,6 +453,13 @@ footer a:hover {
 <a href="certi.html" class="top-left-button">Certifications</a>
 <a href="https://wa.me/966506045846" class="whatsapp-button" target="_blank">
     <img src="ws.png" alt="WhatsApp" />
+</a>
+<a href="mailto:tahasaif21000@yahoo.com" class="email-button">
+    <img src="https://img.icons8.com/fluency/48/000000/new-post.png" alt="Email">
+</a>
+
+<a href="https://www.linkedin.com/in/taha-tohamy-5b889324" class="linkedin-button" target="_blank">
+    <img src="li2.png" alt="LinkedIn">
 </a>
 
     <div class="content">
