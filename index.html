@@ -197,6 +197,117 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.cool-section {
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent background */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.cool-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+    animation: rotateGradient 10s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cool-section:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cool-section h2 {
+    font-size: 3em;
+    color: #ffe600; /* Bright yellow for the heading text */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.interests-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.4em;
+    color: #00e6e6; /* Vibrant cyan for interest text */
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.interest-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.interest-item i {
+    font-size: 2.5em;
+    color: #ffdd00; /* Bright yellow for icons */
+    transition: transform 0.4s ease;
+}
+
+.interest-item:hover i {
+    transform: rotate(15deg) scale(1.1);
+}
+
+#references p {
+    text-align: center;
+    font-size: 1.3em;
+    color: #00e6e6; /* Vibrant cyan for references text */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+#references p:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -613,18 +724,26 @@ footer a:hover {
 </section>
 
 
-        <section id="interests">
-            <h2>Interests</h2>
-            <p data-en="Reading, Football" 
-               data-ar="القراءة، كرة القدم"></p>
-        </section>
-
-        <section id="references">
-            <h2>References</h2>
-            <p data-en="A list of references is available on request." 
-               data-ar="قائمة المراجع متاحة عند الطلب."></p>
-        </section>
+        <section id="interests" class="cool-section">
+    <h2>Interests</h2>
+    <div class="interests-list">
+        <div class="interest-item">
+            <i class="fas fa-book"></i> <!-- Icon for Reading -->
+            <p data-en="Reading" data-ar="القراءة"></p>
+        </div>
+        <div class="interest-item">
+            <i class="fas fa-futbol"></i> <!-- Icon for Football -->
+            <p data-en="Football" data-ar="كرة القدم"></p>
+        </div>
     </div>
+</section>
+
+<section id="references" class="cool-section">
+    <h2>References</h2>
+    <p data-en="A list of references is available on request." 
+       data-ar="قائمة المراجع متاحة عند الطلب."></p>
+</section>
+
 
    <footer>
     <p>Email: <a href="mailto:tahasaif21000@yahoo.com">tahasaif21000@yahoo.com</a></p>
