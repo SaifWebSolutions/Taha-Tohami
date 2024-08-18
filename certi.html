@@ -46,6 +46,7 @@
             text-align: center;
             transform: scale(0.9);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
         }
 
         .certification-item img {
@@ -114,57 +115,146 @@
                 opacity: 1;
             }
         }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-            <h1 class="cool-section"><u class="green-underline"><b>Certifications</b></u></h1>
+        <h1 class="cool-section"><u class="green-underline"><b>Certifications</b></u></h1>
         <div class="certifications">
             <div class="certification-item">
                 <img src="ce1.png" alt="Basic Food Safety Course">
                 <h3>Basic Food Safety Course</h3>
             </div>
             <div class="certification-item">
-                <img src="ce2.png" alt="Certification 2">
+                <img src="ce2.png" alt="Person in Charge (PIC) : Level 3">
                 <h3>Person in Charge (PIC) : Level 3</h3>
             </div>
             <div class="certification-item">
-                <img src="ce3.png" alt="Certification 3">
+                <img src="ce3.png" alt="Certified Restaurant Manager">
                 <h3>Certified Restaurant Manager</h3>
             </div>
-
-<div class="certification-item">
-                <img src="ce4.png" alt="Certification 3">
+            <div class="certification-item">
+                <img src="ce4.png" alt="EL Chico M.I.T Training Program">
                 <h3>EL Chico M.I.T Training Program</h3>
             </div>
-
-<div class="certification-item">
-                <img src="ce5.png" alt="Certification 3">
+            <div class="certification-item">
+                <img src="ce5.png" alt="Certification Name 3">
                 <h3>Certification Name 3</h3>
             </div>
-
-<div class="certification-item">
-                <img src="ce6.png" alt="Certification 3">
+            <div class="certification-item">
+                <img src="ce6.png" alt="Certification Name 3">
                 <h3>Certification Name 3</h3>
             </div>
-
-<div class="certification-item">
-                <img src="ce7.png" alt="Certification 3">
+            <div class="certification-item">
+                <img src="ce7.png" alt="Certification Name 3">
                 <h3>Certification Name 3</h3>
             </div>
-
-<div class="certification-item">
-                <img src="ce8.png" alt="Certification 3">
+            <div class="certification-item">
+                <img src="ce8.png" alt="Certification Name 3">
                 <h3>Certification Name 3</h3>
             </div>
-            <!-- Add more certification items as needed -->
         </div>
     </div>
 
     <a href="index.html" class="go-back-btn">Go Back</a>
 
-  
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgs = document.querySelectorAll('.certification-item img');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        imgs.forEach(function(img) {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
