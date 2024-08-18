@@ -7,28 +7,22 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #001f3f; /* Deep navy background to match home page */
-            color: #ffffff;
+            background-color: #f2f5f7; /* Match the homepage background color */
+            color: #333; /* Match the homepage text color */
             padding: 0;
             margin: 0;
-            scroll-behavior: smooth; /* Smooth scrolling */
-
+            scroll-behavior: smooth;
         }
 
         .container {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background: #003366; /* Navy blue matching home page */
+            background: #ffffff; /* Match the homepage content background */
             border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match the homepage box shadow */
             animation: fadeIn 1s ease-in-out;
         }
-
-.green-underline {
-    color: white;
-    text-decoration-color: yellow; /* This changes the underline color */
-}
 
         .certifications {
             display: flex;
@@ -37,7 +31,7 @@
             gap: 30px;
             margin-bottom: 50px;
             opacity: 0;
-            animation: slideUp 1.5s ease-in-out forwards;
+            animation: fadeInUp 1.5s ease-in-out forwards; /* Match the homepage animation */
         }
 
         .certification-item {
@@ -45,10 +39,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #002b5c; /* Darker blue for certification cards */
+            background: #ffffff; /* Match the homepage item background */
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match the homepage item box shadow */
             text-align: center;
             transform: scale(0.9);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -65,13 +59,13 @@
 
         .certification-item h3 {
             font-size: 1.5em;
-            color: #ffe600; /* Gold color for certification names */
+            color: #e74c3c; /* Match the homepage header color */
             margin: 10px 0;
         }
 
         .certification-item:hover {
             transform: scale(1.1);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Match the homepage hover effect */
         }
 
         /* Responsive design */
@@ -86,35 +80,40 @@
             position: fixed;
             top: 30px;
             right: 30px;
-            background: #28a745; /* Green color for the go-back button */
+            background: #e74c3c; /* Match the button color from the homepage */
             color: #ffffff; /* White text on the button */
             padding: 15px 30px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            animation: bounce 1s infinite;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Match the homepage box shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .go-back-btn:hover {
-            background: #218838; /* Slightly darker green on hover */
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            background-color: #000000; /* Match the hover effect from the homepage */
+            transform: scale(1.05);
         }
 
-        /* Keyframes for animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-       
     </style>
 </head>
 <body>
