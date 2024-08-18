@@ -35,30 +35,43 @@
 }
 
 header {
-            background: url('baba.jfif') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 150px 0;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        }
+    background: url('baba.jfif') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust this value for more or less darkness */
+    z-index: 1;
+}
 
 header h1 {
     font-size: 4em;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 2;
 }
-
-
 
 header .language-switch {
     position: absolute;
     right: 20px;
     top: 20px;
     display: flex;
+    z-index: 2;
 }
+
 
 header .language-switch button {
 
@@ -158,21 +171,25 @@ header .language-switch button:hover {
 }
 
 .download-cv-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 30px;
-            background-color: #CD5C5C;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #CD5C5C;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 3; /* Ensure it's above the overlay */
+}
 
         .download-cv-button:hover {
             background-color: #000000;
             transform: scale(1.05);
+    
+
         }
 
 .content {
